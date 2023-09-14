@@ -8,8 +8,8 @@ const sumAll = function(...args) {
   let i = args[0];
 
   if (
-    (typeof args[0] !== "number" || typeof args[1] !== "number") ||
-    (args[0] < 0 || args[1] < 0)
+    (typeof args[0] !== "number" || typeof args[1] !== "number") ||  // Added an if statement to check if the arguments are actual passable numbers.
+    (args[0] < 0 || args[1] < 0)                                     // Wish I could write this more efficiently
   ) {
     return "ERROR";
     
@@ -23,6 +23,7 @@ const sumAll = function(...args) {
 };
 
 // This code works for the first three tests, but not the rest
+// Updated code with the if statement works for all tests
 
 // Do not edit below this line
 module.exports = sumAll;
