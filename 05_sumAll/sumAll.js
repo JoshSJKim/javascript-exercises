@@ -6,6 +6,14 @@ const sumAll = function(...args) {
   let result = 0; // initialize `result` WITHIN the function to ensure that it starts at 0 on each function call
                   // if initialized outside of the function (globally), the result of the first function call will remain for the second call
   let i = args[0];
+
+  if (
+    (typeof args[0] !== "number" || typeof args[1] !== "number") ||
+    (args[0] < 0 || args[1] < 0)
+  ) {
+    return "ERROR";
+    
+  }
   while (i <= args[1]) {
     result += i;
     i++;
